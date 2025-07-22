@@ -17,7 +17,7 @@ export const sendNotifications = async (data: any): Promise<INotification> => {
                 body: data?.text
             },
             token: user?.deviceToken,
-        }; 
+        };
         //firebase
         firebaseHelper.sendPushNotification(message);
     }

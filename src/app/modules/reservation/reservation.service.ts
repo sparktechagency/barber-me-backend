@@ -16,7 +16,7 @@ const createReservationToDB = async (payload: IReservation): Promise<IReservatio
         throw new Error('Failed to created Reservation ');
     } else {
         const data = {
-            text: "Your reservation has been rejected. Try another Barber",
+            text: "You receive a new reservation request",
             receiver: payload.barber,
             referenceId: reservation._id,
             screen: "RESERVATION"

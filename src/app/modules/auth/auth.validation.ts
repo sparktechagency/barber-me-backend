@@ -11,7 +11,6 @@ const createVerifyEmailZodSchema = z.object({
 const createLoginZodSchema = z.object({
     body: z.object({
         email: z.string({ required_error: 'Email is required' }),
-        deviceToken: z.string({required_error: "Email is required"}).nonempty({message: "You have to must provide Device Token"}),
         password: z.string({ required_error: 'Password is required' })
     })
 });

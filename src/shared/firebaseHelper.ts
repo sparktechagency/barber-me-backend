@@ -20,8 +20,11 @@ const sendPushNotifications = async (
 
 //single user
 const sendPushNotification = async (values: admin.messaging.Message) => {
+    
     const res = await admin.messaging().send(values);
     logger.info('Notification sent successfully', res);
+
+    return;
 };
 
 export const firebaseHelper = {
